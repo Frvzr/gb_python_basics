@@ -2,7 +2,7 @@
 # до минуты: <s> сек;
 # до часа: <m> мин <s> сек;
 #до суток: <h> час <m> мин <s> сек;
-# в остальных случаях: <d> дн <h> час <m> мин <s> сек.
+# в остальных случаях: <d> дн <h> час <m> мин <s> сек. 
 
 
 def convert_time(duration: int) -> str:
@@ -23,6 +23,6 @@ def convert_time(duration: int) -> str:
         return f'{day} дн {hour} час {minute} мин {second} сек'
 
 
-duration = 400153
+duration = 500000
 result = convert_time(duration)
 print(result)
