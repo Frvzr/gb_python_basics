@@ -12,14 +12,14 @@ def convert_time(duration: int) -> str:
     second = ((duration % 86400) % 3600) % 60
     if duration < 60:
         return f'{second} сек'
-    elif duration >= 60 and duration < 3600:
+    elif 60 <= duration < 3600:
         return f'{minute} мин {second} сек'
-    elif duration >= 3600 and duration < 86400:
+    elif 3600 <=duration < 86400:
         return f'{hour} час {minute} мин {second} сек'
     else:
         return f'{day} дн {hour} час {minute} мин {second} сек'
 
 
-duration = 380000
-result = convert_time(duration)
-print(result)
+duration = [53, 183, 7500, 135000]
+for item in duration:
+    print(convert_time(item))
