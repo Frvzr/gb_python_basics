@@ -20,8 +20,7 @@ def thesaurus_adv(*args) -> dict:
                         if args[i][0] not in dict_out[j]:
                             dict_out[j].update({args[i][0]: [args[i]]})
                         else:
-                            dict_out[j][args[i][0]].append(args[i])
-                        
+                            dict_out[j][args[i][0]].append(args[i]) 
     return dict_out
 
 

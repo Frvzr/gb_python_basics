@@ -2,6 +2,7 @@
 # b) Сформировать из обработанного списка строку:
 # *(вместо задачи 2) Решить задачу 2, не создавая новый список (как говорят, in place). Эта задача намного серьёзнее, чем может сначала показаться.
 
+
 def convert_list_in_str(list_in: list) -> str:
     #print(id(list_in))
     i = 0
@@ -43,7 +44,6 @@ def convert_list_in_str(list_in: list) -> str:
             else:
                 # за счет срез избавляемся от пробела перед "
                 str_out = str_out[:i-1] + str_out[i:]              
-
     return str_out
 
 

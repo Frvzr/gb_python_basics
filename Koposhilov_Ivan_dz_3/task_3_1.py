@@ -4,7 +4,6 @@
 
 def num_translate(key: str) -> str:
     """переводит числительное с английского на русский """
-
     numbers = {
         'zero': 'ноль',
         'one': 'один',
@@ -18,12 +17,12 @@ def num_translate(key: str) -> str:
         'nine': 'девять',
         'ten': 'десять'
     }
-
+    # str_out = numbers.get(value)
+    # return str_out
     if key in numbers:
         str_out = numbers[key]
     else:
         str_out = None
-
     return str_out
 
 numbers_eng = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven']

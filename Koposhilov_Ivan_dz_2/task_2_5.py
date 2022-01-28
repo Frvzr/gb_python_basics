@@ -18,7 +18,6 @@ def transfer_list_in_str(list_in: list) -> str:
 
         str_list.append(f'{rub} руб {kop:02} коп')
         str_out = ', '.join(str_list)
-        
     return str_out
 
 

@@ -11,7 +11,6 @@ def convert_name_extract(list_in: list) -> list:
         join_item = ''.join(item)
         split_item = join_item.split()
         list_out.append(f'Привет, {split_item[-1].capitalize()}!')
-        
     return list_out
 
 

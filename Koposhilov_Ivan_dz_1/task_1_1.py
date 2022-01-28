@@ -23,3 +23,4 @@ def convert_time(duration: int) -> str:
 duration = [53, 183, 7500, 135000]
 for item in duration:
     print(convert_time(item))
+    

@@ -3,6 +3,7 @@
 # b) К каждому элементу списка добавить 17 и заново вычислить сумму тех чисел из этого списка, сумма цифр которых делится нацело на 7.
 # *c) Решить задачу под пунктом b, не создавая новый список. (если будете решать - либо создайте доп. функцию, либо перепишите существующую sum_list_2)
 
+
 def sum_list_1(dataset: list) -> int:
     total_sum = 0
     for data in dataset:
@@ -27,5 +28,3 @@ result_1 = sum_list_1(numbers)
 print(result_1)
 result_2 = sum_list_2(numbers)
 print(result_2)
-
-#test change for pull request

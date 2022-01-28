@@ -12,11 +12,17 @@ adjectives = ["веселый", "яркий", "зеленый", "утопичн�
 """
 1-ое решение с повторяющимися значениями из глобальной области
 """
+
 def get_jokes(count: int) -> list:
-    """Возвращает список шуток в количестве count"""
+    """
+    Возвращает список шуток в количестве count
+    """
+
     list_out = []
+
     for _ in range(count):
         list_out.append(f'{random.choice(nouns)} {random.choice(adverbs)} {random.choice(adjectives)}')
+    
     return list_out
 
 
@@ -29,11 +35,16 @@ print(get_jokes(10))
 извлекает неповторяющиеся элементы, если длина меньше списка, достает уникальные значения
 """
 def get_jokes_adv(count: int) -> list:
-    """Возвращает список шуток в количестве count"""
+    """
+    Возвращает список шуток в количестве count
+    """
+
     nouns_local = ["автомобиль", "лес", "огонь", "город", "дом", "огород"]
     adverbs_local = ["сегодня", "вчера", "завтра", "позавчера", "ночью", "в субботу"]
     adjectives_local = ["веселый", "яркий", "зеленый", "утопичный", "мягкий", "суровый"]
+
     list_out = []
+
     length = min([len(nouns_local), len(adverbs_local), len(adjectives_local)])
 
     for _ in range(count):
@@ -45,6 +56,7 @@ def get_jokes_adv(count: int) -> list:
         else:
             list_out.append(f'{random.choice(nouns)} {random.choice(adverbs)} {random.choice(adjectives)}')
             count -= 1
+
     return list_out
 
 
@@ -58,14 +70,17 @@ print(get_jokes_adv(10))
 """
 def get_jokes_adv_flag(count: int, flag) -> list:
     """Возвращает список шуток в количестве count"""
+
     nouns_local = ["автомобиль", "лес", "огонь", "город", "дом", "огород"]
     adverbs_local = ["сегодня", "вчера", "завтра", "позавчера", "ночью", "в субботу"]
     adjectives_local = ["веселый", "яркий", "зеленый", "утопичный", "мягкий", "суровый"]
+    
     list_out = []
+
     # находим минимальное значение, т.к уникальных связок может быть не более чем длина списка
     length = min([len(nouns_local), len(adverbs_local), len(adjectives_local), count])
 
-    if flag == True:
+    if flag:
         for _ in range(length):
             noun = nouns_local.pop(random.randrange(len(nouns_local)))
             adverb = adverbs_local.pop(random.randrange(len(adverbs_local)))
@@ -74,6 +89,7 @@ def get_jokes_adv_flag(count: int, flag) -> list:
     else:
         for _ in range(count):
             list_out.append(f'{random.choice(nouns)} {random.choice(adverbs)} {random.choice(adjectives)}')
+
     return list_out
 
 flag = False
