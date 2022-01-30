@@ -14,16 +14,20 @@ def currency_rates_adv(code: str):
     values = soup.find_all('value')
     tag = soup.valcurs
     date_value = tag['date']
-    datetime_date = datetime.datetime.strptime(date_value, '%d.%m.%Y')
+    datetime_date = datetime.datetime.strptime(date_value, '%d.%m.%Y').date()
     data = {}
 
     for i in range(0, len(charcodes)):
         data[charcodes[i].text] = [names[i].text, values[i].text]
         
     kurs = data.get(code)
-    float_kurs = float(kurs[1].replace(',', '.'))
-    data_tuple = (float_kurs, datetime_date)
-    return data_tuple
+    if kurs:
+        float_kurs = float(kurs[1].replace(',', '.'))
+        data_tuple = (float_kurs, datetime_date)
+        return data_tuple
+    else:
+        data_tuple = (kurs, datetime_date)
+        return data_tuple
 
 kurs, date_value = currency_rates_adv("USD")
 empty = bool(not kurs and not date_value)
@@ -31,4 +35,4 @@ if not empty and not isinstance(kurs, float):
     raise TypeError("Неверный тип данных у курса")
 if not empty and not isinstance(date_value, datetime.date):
     raise TypeError("Неверный тип данных у даты")
-print(kurs, date_value)
+print(f'{kurs}, {date_value}')
