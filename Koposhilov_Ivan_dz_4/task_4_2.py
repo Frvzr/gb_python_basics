@@ -16,7 +16,7 @@ def currency_rates(code:str) -> float:
 
     for i in range(0, len(charcodes)):
         data[charcodes[i].text] = [names[i].text, values[i].text]
-
+        
     result_value = data.get(code)
 
     if result_value == None:
