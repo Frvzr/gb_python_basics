@@ -1,6 +1,7 @@
 from time import perf_counter
 import sys
 
+
 def get_numbers(src: list):
     """
     Генератор, выводящий значения из списка, которые больше предыдущего значения
