@@ -7,6 +7,3 @@ if len(command) != 2:
 else:
     with open('backery.csv', 'a', encoding='utf-8') as f:
         print(command[1], file=f)
-
-if __name__ == '__main__':
-    pass

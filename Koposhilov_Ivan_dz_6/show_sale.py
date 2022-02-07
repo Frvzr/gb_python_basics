@@ -14,7 +14,3 @@ with open('backery.csv', 'r', encoding='utf-8') as f:
         lines = [line for line in f]
     lines = [line.rstrip() for line in lines]
     print(*lines, sep='\n')
-
-
-if __name__ == '__main__':
-    pass
