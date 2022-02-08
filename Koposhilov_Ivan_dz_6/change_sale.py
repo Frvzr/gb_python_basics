@@ -12,9 +12,3 @@ else:
                 break
 
     # with open('backery.csv', 'r+', encoding='utf-8') as f:
-
-
-
-
-        
-    
