@@ -47,4 +47,4 @@ result = dict.fromkeys(files_size, 0)
 print(found_files(files_size, result))
 
 with open('summary.json', 'w+', encoding='utf-8') as f:
-    json.dump(result, f, indent=6)
+    json.dump(result, f)

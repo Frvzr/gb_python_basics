@@ -1,4 +1,3 @@
-from distutils import file_util
 import os
 import shutil
 

@@ -2,7 +2,7 @@ import os
 
 
 def found_files(files_size, result):
-    folder = os.getcwd()
+    folder = os.path.dirname(os.path.abspath(__file__))
     for item in os.scandir(folder):
         if os.path.isfile(item):
             path_file = os.path.join(folder, item)
