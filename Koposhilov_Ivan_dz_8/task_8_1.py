@@ -12,13 +12,14 @@ def email_parse(email: str) -> dict:
 
     if re.match(RE_MAIL, email.strip()):
         valid_email = re.search(RE_MAIL, email)
-        print(valid_email.groupdict())
+        result = valid_email.groupdict()
+        return result
     else:
         raise ValueError(msg)
 
 
 if __name__ == '__main__':
-    email_parse(' someone@geekbrains.ru ')
+    print(email_parse(' someone@geekbrains.ru '))
     email_parse('ivan.kop@some-company.co.ru')
     email_parse('so_m-e.on-e99@geekbrains.ru')
     email_parse('so-me1one@geekbrains.ru')
