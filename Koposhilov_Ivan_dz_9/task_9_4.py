@@ -1,6 +1,3 @@
-from turtle import speed
-
-
 
 class Car:
     is_police: bool = False
